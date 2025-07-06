@@ -18,7 +18,8 @@ setup(
     version='0.0.1',
     author ='simran',
     author_email='ksimranjuneja19@gmail.com',
-    packages=find_packages(),          # searches for valid package folders
+    packages=find_packages(), 
+    # searches for valid package folders
+  
     install_requires=get_requirements('requirements.txt')
 )
-
