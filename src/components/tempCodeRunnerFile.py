@@ -17,8 +17,6 @@ class DataIngestionConfig:
 class DataIngestion:
     def __init__(self):
         self.ingestion_config=DataIngestionConfig()
-
-        
     def initiate_data_ingestion(self):
         logging.info('entered the data ingestion method or component')    
         try:
@@ -33,11 +31,9 @@ class DataIngestion:
 
             train_set,test_set=train_test_split(df,test_size=0.2,random_state=42)
            
-         
-            logging.info('hi there')
-            logging.info(f"Saving train at: {self.ingestion_config.train_data_path}")
 
-  
+            logging.info('hi there')
+
             train_set.to_csv(self.ingestion_config.train_data_path,index= False,header=True)
             logging.info(f"About to write test CSV to {self.ingestion_config.test_data_path}")
             test_set.to_csv(self.ingestion_config.test_data_path, index=False, header=True)
